@@ -11,7 +11,7 @@ pipeline {
         stage('Ready to Deploy') {
 	agent { label "slave-node-2" }
             options {
-                timeout(time: 1, unit: 'MINUTES') 
+                timeout(time: 3, unit: 'MINUTES') 
             }
             steps {
                 input(message: "Deploy to production?")
